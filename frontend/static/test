@@ -1,0 +1,59 @@
+using WebSocketSharp; // Ensure this is the correct namespace
+using UnityEngine;
+ 
+public class WS_Client : MonoBehaviour
+{
+    WebSocket ws; // Corrected the case to 'WebSocket'
+
+    void Start()
+    {
+        ws = new WebSocket("ws://localhost:8082");
+        ws.OnMessage += (sender, e) =>
+        {
+            // Corrected 'Data' to match the case of the property
+            Debug.Log("Message received from " + ((WebSocket)sender).Url + ", Data : " + e.Data);
+        };
+ 
+        ws.OnOpen += (sender, e) =>
+        {
+            Debug.Log("Connection established.");
+        };
+ 
+        ws.OnError += (sender, e) =>
+        {
+            Debug.LogError("Error from WebSocket: " + e.Message);
+        };
+ 
+        ws.Connect();
+    }
+ 
+    void Update()
+    {
+        if (ws == null)
+        {
+            return;
+        }
+ 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            // Only send the message if the WebSocket is open
+            if (ws.ReadyState == WebSocketState.Open)
+            {
+                ws.Send("Hello");
+            }
+            else
+            {
+                Debug.LogWarning("WebSocket is not connected.");
+            }
+        }
+    }
+ 
+    private void OnDestroy()
+    {
+        if (ws != null)
+        {
+            ws.Close();
+            ws = null;
+        }
+    }
+}
