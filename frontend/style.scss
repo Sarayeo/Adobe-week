@@ -45,6 +45,7 @@ header {
   background-color: rgb(255, 255, 255);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
+
   .head {
     display: flex;
     align-items: center;
@@ -55,21 +56,19 @@ header {
   .logo  {
       
     a{
-      width: 30%;
-      color: rgb(11, 5, 33);
-      font-weight: 700;
-      font-size: 25px;
-      padding: 0 10%;
-      text-decoration: none;
+     width: 30%;
+     color: #000000;
+     text-decoration: none;
+     font-family: "vox-round", sans-serif;
+     font-weight: 600;
+     font-size: 24px;
+     font-style: normal;
       
-    }
-    span{
-      color: rgb(215, 214, 153);
     }
    
   }
   .menu {
-    width: 70%;
+    width: 20%;
     display: flex;
     justify-content: space-between;
     gap: 50px;
@@ -233,41 +232,28 @@ body{
     //justify-content: center;
      margin-left: 2%;
      margin-right: 2%;
-      margin-top: -1.5%;
+     margin-top: -1.2%;
      font-family: "vox-round", sans-serif;
      font-weight: 700;
-     font-size: 28px;
+     font-size: 24px;
      font-style: normal;
    }
-  }
-  .animate__animated.animate__fadeInDown {
-      --animate-duration: 1s;
-    }
-  .animate__animated.animate__backInLeft {
-       animation-delay: 1s;
-    }
-  .animate__animated.animate__fadeInUp{
-  
-      animation-delay: 5s;
-  }
-  .animate__animated.animate__backInUp{
-    animation-delay: 5s;
-  }
-  .about_me {
+   .ligne1{
+    height: 2px;
+    width: 41%;
+    background-color: #0B0521;
+}
+.ligne1bis{
+    height: 2px;
+    width: 41%;
+    background-color: #0B0521;
+}
+.about_me {
     height: 190vh;
     width: 100%;
     margin: 0 auto;
     display: block;
-    .ligne1{
-        height: 2px;
-        width: 41%;
-        background-color: #0B0521;
-    }
-    .ligne1bis{
-        height: 2px;
-        width: 41%;
-        background-color: #0B0521;
-    }
+   
     .rowa{
       display: flex;
       width: 100%;
@@ -288,6 +274,21 @@ body{
         flex-direction: column;
     }
 }
+  }
+  .animate__animated.animate__fadeInDown {
+      --animate-duration: 1s;
+    }
+  .animate__animated.animate__backInLeft {
+       animation-delay: 1s;
+    }
+  .animate__animated.animate__fadeInUp{
+  
+      animation-delay: 5s;
+  }
+  .animate__animated.animate__backInUp{
+    animation-delay: 5s;
+  }
+  
 footer {
   background-color: #8ca9ea;
   display: flex;
