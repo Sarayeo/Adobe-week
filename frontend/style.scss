@@ -70,22 +70,22 @@ header {
   .menu {
     width: 20%;
     display: flex;
-    justify-content: space-between;
     gap: 50px;
-    padding-right: 5%;
 
     li {
         margin: 0 15px;
         list-style: none;
+        
 
         a {
-            font-weight: 350;
-            font-size: 20px;
+            font-family: "vox-round", sans-serif;
+            font-weight: 400;
+            font-size: 22px;
+            font-style: normal;
             -webkit-text-decoration: 0;
             text-decoration: 0;
             color: rgb(11, 5, 33);
             position: relative;
-
           }
           a::after {
             position: absolute;
@@ -289,67 +289,6 @@ body{
     animation-delay: 5s;
   }
   
-footer {
-  background-color: #8ca9ea;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-top: 15%;
-  opacity: 0.7;
-  h1{
-    color: rgb(11, 5, 33);
-    font-size: larger;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-  }
-  p{
-    color: rgb(215, 214, 153);
-  }
-
-  p:hover{
-    color: #717d06;
-  }
-  .services {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    .service1{
-      margin-top: 4ex;
-    }
-    .service2{
-      margin-top: 4ex;
-    }
-    .service3{
-      margin-top: 4ex;
-      .logo-perso{
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        img{
-          width:40px;
-          height:40px;
-        }
-      }
-      .logo-perso-2{
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        img{
-          width:40px;
-          height:40px;
-        }
-      }
-      .logo-perso-3{
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        img{
-          width:40px;
-          height:40px;
-        }
-      }
-    }
-  }
-}
 .projects{
   color:#13144c;
   align-items: center;

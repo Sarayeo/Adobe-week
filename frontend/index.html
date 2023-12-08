@@ -21,8 +21,8 @@
             <a href="">Keeper tracker</a>
         </div>
         <ul class="menu">
-            <li><a href="#About_me">Jouer</a></li>
-            <li><img src="static/img/log.png" alt="logo" style="width: 100px;"></li>
+            <li style="margin-top: 23%;margin-left: 40%;"><a href="#About_me"><p>Jouer</p></a></li>
+            <li><img src="static/img/log.png" alt="logo" style="width: 130px; margin-top: 50px; "></li>
         </ul>
     </div>
     <!-- menu responsive -->
@@ -113,27 +113,12 @@
         <div class="midle" >Scores of the world</div>
         <div class="ligne1bis"></div>
       </div>
-      <div class="rowb">
+      <div class="rowb" style="display: flex; flex-direction: column;">
         <h1>Statistics</h1>
-    <section id="yay">
-  <div class="box">
-    <div class="container">
-      <span class="number">25</span>
-      <br />
-      Calls 
-    </div>
-    <div class="fill speed1" style="background : #81c784; "></div>
-  </div> 
-  
-  <div class="box">
-    <div class="container">
-      <span class="number">53</span>
-      <br />
-      Emails 
-    </div>
-    <div class="fill speed2" style="background : #f69679;"></div>
-  </div>
-    </section> 
+        <div class="chart">
+          <canvas id="myChart" style="width: 60%; height: 40vh; margin-bottom: 30px; margin-left: 5%;"></canvas>
+        </div>
+    
       </div>
     <!-- third part -->
       <div style="display: flex; flex-direction: row;">
@@ -178,57 +163,30 @@
 
    
   </section>
-<section id="at" class="animate__animated animate__fadeInUp" >
-    
-    <div class="animate__animated animate__fadeInUp">
-        <div class="categories">
-            <div class="cat">
-                <p>PROJECTS:</p>  
-            <div class="barre"></div>
-            </div>
-            <div class="cat"> <p>web</p> </div>
-            <div class="cat"><p>personnal</p> </div>
-            <div class="cat"><p>groupe</p> </div>
-        </div>
-    </div>
-</section>
-    <!-- ================projects section start =================-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['danemark', 'Blue', 'Ukrain', 'Nepal', 'Purple', 'China','Italia','Spain','Black','Australia','France','Brazil'],
+        datasets: [{
+          label: 'TOPSCORE',
+          data: [88, 2, 60, 2, 2, 54,2,2,6,20,96,2],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
 
-<footer>
-<div class="services">    
-    <div class="service1">
-        <img src="img/thanks.webp" alt="">
-        
-    </div>
-
-    <div class="service2">
-        <h1>contacts</h1>
-        <p>yeokpeusseusarafiela@gmail.com</p>
-        <p>kpeusseu-sara-fiela.yeo@edu.devinci.fr</p>    
-    </div>
-    <div class="service3">
-    <h1>follow me on</h1>
-        <div class="liens">
-            <div class="logo-perso">
-            <a href="https://github.com/Sarayeo">
-                <img   src="img/icons8-github-50.webp" alt="gitgub" class="responsive"
-              />
-            </a><p>gitgub</p>
-            </div>
-            <div class="logo-perso-2">
-            <a href="Sakane.dero#2237">
-                <img    src="img/icons8-discord-50.webp" alt="discord" class="responsive" />
-            </a><p>discord</p>
-            </div>
-            <div class="logo-perso-3">
-            <a href="https://www.linkedin.com/in/sara-yeo-52935b222/">
-                <img  src="img/icons8-linkedin-50.webp" alt="linkedin"class="responsive"  />
-            </a><p>linkedin</p>
-            </div>
-        </div>
-    </div>
-</div>
-</footer>
 <script src="script.js"></script>
 </body>
 </html>
