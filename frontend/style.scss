@@ -148,7 +148,7 @@ body{
         height: 68px;
         border-radius: 15px;
         border: none;
-        margin-top: 28vh;
+        margin-top: 32vh;
         margin-left: 2vw;
       }
     }
@@ -189,7 +189,7 @@ body{
                 height: 42px;
                 border-radius: 15px;
                 border: none;
-                margin-top: 4vh;
+                margin-top: 6vh;
                 margin-left: 2vw;
               }
           
@@ -222,7 +222,7 @@ body{
                 height: 42px;
                 border-radius: 15px;
                 border: none;
-                margin-top: 9vh;
+                margin-top: 12vh;
                 margin-left: 2vw;
               }
       }
@@ -283,17 +283,6 @@ body{
     animation-delay: 5s;
   }
   
-.projects{
-  color:#13144c;
-  align-items: center;
-  justify-content: center;
-}
-.projects .title::before{
-  background: #fff;
-}
-.projects .title::after{
-  background: #111;
-}
 @media (max-width: 840px) {
   body{
     width: 100%;
