@@ -1,5 +1,8 @@
 const express = require('express');
 const http = require('http');
+const ip = require('ip');
+let ipaddress = ip.address();
+console.log (ipaddress)
 const WebSocket = require('ws');
 
 const port = 8082;
@@ -10,18 +13,16 @@ wss.on('connection', function connection(ws) {
   ws.on('message', (data)=> {
     wss.clients.forEach(function each(client) {
         console.log(String(data))
+        ws.send(String(data))
       if (client !== ws && client.readyState === WebSocket.OPEN) {
         client.send(String(data));
       }
     })
   })
 })
-
 server.listen(port, function() {
   console.log(`Nous écoutons sur le port ${port}!`)
 })
-
-
 
 // const express = require('express');
 // const http = require('http');
